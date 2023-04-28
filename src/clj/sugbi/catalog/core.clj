@@ -1,9 +1,8 @@
 (ns sugbi.catalog.core
- (:require
-  [clojure.set :as set]
-  [sugbi.catalog.db :as db] 
-  [sugbi.db.utils :as db.utils]
-  [sugbi.catalog.open-library-books :as olb]))
+  (:require
+   [clojure.set :as set]
+   [sugbi.catalog.db :as db]
+   [sugbi.catalog.open-library-books :as olb]))
 
 
 (defn merge-on-key
@@ -16,20 +15,39 @@
 
 (def available-fields olb/relevant-fields)
 
+(comment 
+  (db/insert-book! {:title "Noches de verano" :isbn "1234"})
+  (db/insert-book! {:title "La iliada" :isbn "12345"})
+  (db/insert-book! {:title "La divina comedia" :isbn "123456"})
+  (db/get-books {})
+  (db/insert-book-item! {:book-id 1})
+  (db/insert-book-item! {:book-id 1})
+  (db/insert-book-item! {:book-id 2})
+  (db/insert-book-item! {:book-id 2})
+  (db/insert-book-item! {:book-id 3})
+  (checkout-book 1 2)
+  (checkout-book 1 2)
+  (checkout-book 2 3)
+  (checkout-book 1 5)
+  (db/get-book-item-loans! {:book-item-id 3})
+  (return-book 2 3)
+  (return-book 4 5)
+  (get-book-loans 1)
+  (get-book "1234" )
+  )
+
 
 (defn get-book
   [isbn fields]
   (when-let [db-book (db/get-book {:isbn isbn})]
-    (when-let [available (db/get-available-book isbn)]
-      (let [open-library-book-info (olb/book-info isbn fields)]
-        (merge db-book open-library-book-info {:available available})))))
+    (let [open-library-book-info (olb/book-info isbn fields)]
+      (merge db-book open-library-book-info))))
 
 
 (defn get-books
   [fields]
   (let [db-books                (db/get-books {})
         isbns                   (map :isbn db-books)
-        availables              (db/get-available-books isbns)
         open-library-book-infos (olb/multiple-book-info isbns fields)]
     (merge-on-key
      :isbn
@@ -47,20 +65,21 @@
      db-book-infos
      open-library-book-infos)))
 
-
-(defn checkout-book
-  [user-id book-item-id]
-  (if (db/in-loan book-item-id)
-    (db/insert-loan! {:user-id user-id :book-item-id book-item-id})
-    "El ejemplar que deseas no se encuentra disponible"))
+(defn checkout-book 
+  [user-id book-item-id] 
+  (let [book-id (db/find-book-id {:book-item-id book-item-id})] 
+    (if (db/is-book-item-loan {:book-item-id book-item-id, :book-id book-id}) 
+      "El ejemplar que deseas no se encuentra disponible" 
+      (db/insert-loan! {:user-id user-id, :book-item-id book-item-id}))))
 
 (defn return-book
   [user-id book-item-id]
-  (db/delete-loan {:user-id user-id :book-item-id book-item-id}))
+  (let [correct-data (db/delete-loan! {:user-id user-id, :book-item-id book-item-id})]
+    (if (= correct-data 1)
+      "Libro devuelto"
+      "No se encontro el prestamo")))
 
-(defn get-book-lendings
+(defn get-book-loans 
   [user-id]
-  (->> (db/get-book-loans {:user-id user-id})
-       (group-by :title)
-       vals
-       (map #(db.utils/aggregate-field % :title :isbn :loan_date :due_date))))
+  (db/user-book-loans {:user-id user-id}))
+

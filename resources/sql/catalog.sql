@@ -5,22 +5,36 @@ returning *;
 -- :name delete-book! :! :n
 delete from catalog.book where isbn = :isbn;
 
+-- :name insert-book-item! :! :1
+insert into catalog.book_item (book_id) values (:book-id)
+returning *;
+
+-- :name get-book-item-loans! :? :*
+select *
+from catalog.book_loan
+where book_item_id = :book-item-id;
+
 -- :name search :? :*
-select isbn
+select isbn, true as "available"
 from catalog.book
 where lower(title) like :title;
 
 -- :name get-book :? :1
-select isbn
+select isbn, true as "available"
 from catalog.book
-where isbn = :isbn
+where isbn = :isbn;
 
 -- :name get-books :? :*
-select isbn
+select isbn, true as "available"
 from catalog.book;
 
--- :name in-book-loan-table :? :1
-select book_loan_id
+-- :name find-book-id :? :1
+select book_id
+from catalog.book_item
+where book_item_id = :book-item-id;
+
+-- :name is-book-item-loan :? :1
+select book_item_id = :book-item-id as "available"
 from catalog.book_loan
 where book_item_id = :book-item-id;
 
@@ -34,24 +48,9 @@ returning *;
 delete from catalog.book_loan 
 where user_id = :user-id and book_item_id = :book-item-id;
 
--- :name get-book-loans :? :*
-select title, isbn, loan_date, due_date  
-from catalog.book_loans
+-- :name user-book-loans :? :*
+select book_id, title, due_date
+from catalog.book_loan 
 join catalog.book_item using (book_item_id)
 join catalog.book using (book_id)
 where user_id = :user-id;
-
--- :name get-total-book-count :? :1
-select count(*)
-from catalog.book
-join catalog.book_item using (book_id)
-where isbn = :isbn
-
--- :name get-book-loans-count :? :1
-select count(*)
-from catalog.book
-join catalog.book_item using (book_id)
-join catalog.book_loan using (book_item_id)
-where isbn = :isbn
-
-
