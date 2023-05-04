@@ -45,6 +45,6 @@
     ["/api-docs/*"
      {:get (swagger-ui/create-swagger-ui-handler
             {:url "/api/swagger.json"
-             :config {:validator-url nil}})}]]
+             :config {:validator-url nil}})}]] 
 
    catalog.routes/routes])

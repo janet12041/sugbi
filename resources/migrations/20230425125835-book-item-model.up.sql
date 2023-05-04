@@ -6,7 +6,7 @@ create table catalog.book_item (
 create table catalog.book_loan (
   book_loan_id bigint generated always as identity primary key,
   user_id bigint not null,
-  book_item_id  bigint not null references catalog.book_item,
+  book_item_id bigint not null references catalog.book_item,
   loan_date date not null,
   due_date date not null
 );

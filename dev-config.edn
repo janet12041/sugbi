@@ -10,5 +10,5 @@
  :database-url "postgresql://localhost:5432/sugbi_dev?user=sugbi&password=spassword"
 
  ;; get this info from https://console.cloud.google.com/apis/credentials
- :google/client "Your client_id"
- :google/secret "Your client_secret"}
+ :google/client "79309986306-pkv6nq0mqfuld85lbae3pfmf5j1u6at3.apps.googleusercontent.com"
+ :google/secret "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"}

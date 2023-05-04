@@ -16,9 +16,9 @@
 (def available-fields olb/relevant-fields)
 
 (comment 
-  (db/insert-book! {:title "Noches de verano" :isbn "1234"})
-  (db/insert-book! {:title "La iliada" :isbn "12345"})
-  (db/insert-book! {:title "La divina comedia" :isbn "123456"})
+  (db/insert-book! {:title "¿Sufren las piedras?. Pequeño manual filosófico" :isbn "978-6073828345"})
+  (db/insert-book! {:title "El hombre que cayó a la Tierra" :isbn "978-6073828673"})
+  (db/insert-book! {:title "Mil Veces Hasta Siempre" :isbn "978-6073161145"})
   (db/get-books {})
   (db/insert-book-item! {:book-id 1})
   (db/insert-book-item! {:book-id 1})
@@ -33,7 +33,7 @@
   (return-book 2 3)
   (return-book 4 5)
   (get-book-loans 1)
-  (get-book "1234" )
+  (get-book "1234")
   )
 
 
@@ -69,15 +69,19 @@
   [user-id book-item-id] 
   (let [book-id (db/find-book-id {:book-item-id book-item-id})] 
     (if (db/is-book-item-loan {:book-item-id book-item-id, :book-id book-id}) 
-      "El ejemplar que deseas no se encuentra disponible" 
+      false
       (db/insert-loan! {:user-id user-id, :book-item-id book-item-id}))))
 
 (defn return-book
   [user-id book-item-id]
-  (let [correct-data (db/delete-loan! {:user-id user-id, :book-item-id book-item-id})]
-    (if (= correct-data 1)
-      "Libro devuelto"
-      "No se encontro el prestamo")))
+  (comment
+    (let [correct-data (db/delete-loan! {:user-id user-id, :book-item-id book-item-id})]
+      (if (= correct-data 1)
+        correct-data
+        false))
+    )
+  (db/delete-loan! {:user-id user-id, :book-item-id book-item-id})
+  )
 
 (defn get-book-loans 
   [user-id]
