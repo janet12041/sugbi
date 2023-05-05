@@ -475,3 +475,589 @@ java.lang.IllegalStateException: ABORTED
 -=[sugbi started successfully using the development profile]=- 
 2023-05-04 17:09:50,063 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
 2023-05-04 17:09:51,483 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 20:14:55,237 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-05-04 20:14:56,802 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-05-04 20:14:56,845 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-05-04 20:14:57,528 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-05-04 20:14:57,597 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-05-04 20:15:44,849 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 20:15:46,243 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  luminus.http-server - server started on port 3000 
+2023-05-04 20:15:56,453 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Starting migrations 
+2023-05-04 20:15:58,328 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x4b20d76 /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:15:58,398 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Running down for [20230504220643 20230425125835 20230417032642 20230321184035 20230228002443] 
+2023-05-04 20:15:58,398 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Down 20230504220643-user-id-type 
+2023-05-04 20:15:58,399 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x52a823a1 org.postgresql.jdbc.PgConnection@52a823a1]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:15:58,454 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-05-04 20:15:58,639 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] ERROR migratus.migration.sql - failed to execute command:
+ ALTER TABLE catalog.book_loan ALTER COLUMN user_id SET DATA TYPE bigint; 
+2023-05-04 20:15:58,640 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] ERROR migratus.migration.sql - ERROR: column "user_id" cannot be cast automatically to type bigint
+  Hint: You might need to specify "USING user_id::bigint". 
+2023-05-04 20:15:58,648 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Ending migrations 
+2023-05-04 20:17:57,554 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Starting migrations 
+2023-05-04 20:17:57,593 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x2598be0c /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:17:57,605 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Ending migrations 
+2023-05-04 20:18:06,926 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Starting migrations 
+2023-05-04 20:18:06,969 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x27b4a94b /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:18:06,972 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Running down for [20230504220643 20230425125835 20230417032642 20230321184035 20230228002443] 
+2023-05-04 20:18:06,973 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Down 20230504220643-user-id-type 
+2023-05-04 20:18:06,973 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6567f31d org.postgresql.jdbc.PgConnection@6567f31d]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:18:06,980 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-05-04 20:18:06,984 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] ERROR migratus.migration.sql - failed to execute command:
+ ALTER TABLE catalog.book_loan ALTER COLUMN user_id SET DATA TYPE bigint; 
+2023-05-04 20:18:06,984 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] ERROR migratus.migration.sql - ERROR: column "user_id" cannot be cast automatically to type bigint
+  Hint: You might need to specify "USING user_id::bigint". 
+2023-05-04 20:18:06,990 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Ending migrations 
+2023-05-04 20:22:55,702 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Starting migrations 
+2023-05-04 20:22:55,735 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x49b68590 /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:22:55,738 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Running down for [20230504220643 20230425125835 20230417032642 20230321184035 20230228002443] 
+2023-05-04 20:22:55,738 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Down 20230504220643-user-id-type 
+2023-05-04 20:22:55,738 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x5801dce2 org.postgresql.jdbc.PgConnection@5801dce2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:22:55,744 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-05-04 20:22:56,143 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] ERROR migratus.migration.sql - failed to execute command:
+ ALTER TABLE catalog.book_loan ALTER COLUMN user_id SET DATA TYPE bigint USING user_id::bigint; 
+2023-05-04 20:22:56,143 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] ERROR migratus.migration.sql - ERROR: value "109321309648652260554" is out of range for type bigint 
+2023-05-04 20:22:56,148 [nREPL-session-c6538ea3-d610-4f70-975a-4cc984106ded] INFO  migratus.core - Ending migrations 
+2023-05-04 20:23:56,506 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 20:25:14,998 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-05-04 20:25:16,057 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-05-04 20:25:16,070 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-05-04 20:25:16,414 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-05-04 20:25:16,434 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-05-04 20:26:50,439 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 20:27:35,139 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-05-04 20:27:36,053 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-05-04 20:27:36,059 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-05-04 20:27:36,199 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-05-04 20:27:36,222 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-05-04 20:28:49,681 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 20:29:37,897 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-05-04 20:29:38,773 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-05-04 20:29:38,780 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-05-04 20:29:38,915 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-05-04 20:29:38,933 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-05-04 20:30:59,526 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 20:42:00,573 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-05-04 20:42:02,105 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-05-04 20:42:02,139 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-05-04 20:42:02,605 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-05-04 20:42:02,656 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-05-04 20:44:33,996 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 20:44:34,878 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  luminus.http-server - server started on port 3000 
+2023-05-04 20:44:48,014 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Starting migrations 
+2023-05-04 20:44:49,346 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x3a6aa390 /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:44:49,419 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Running down for [20230504220643 20230425125835 20230417032642 20230321184035 20230228002443] 
+2023-05-04 20:44:49,420 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Down 20230504220643-user-id-type 
+2023-05-04 20:44:49,421 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x410526c2 org.postgresql.jdbc.PgConnection@410526c2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:44:49,459 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-05-04 20:44:50,013 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] ERROR migratus.migration.sql - failed to execute command:
+ ALTER TABLE catalog.book_loan ALTER COLUMN user_id SET DATA TYPE bigint USING user_id::bigint; 
+2023-05-04 20:44:50,013 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] ERROR migratus.migration.sql - ERROR: value "109321309648652260554" is out of range for type bigint 
+2023-05-04 20:44:50,048 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Ending migrations 
+2023-05-04 20:49:30,666 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Starting migrations 
+2023-05-04 20:49:31,383 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x459ba83 /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:49:31,578 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Running down for [20230504220643] 
+2023-05-04 20:49:31,579 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Down 20230504220643-user-id-type 
+2023-05-04 20:49:31,579 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x714ddc7 org.postgresql.jdbc.PgConnection@714ddc7]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:49:31,586 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-05-04 20:49:31,638 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] ERROR migratus.migration.sql - failed to execute command:
+ ALTER TABLE catalog.book_loan ALTER COLUMN user_id SET DATA TYPE bigint USING user_id::bigint; 
+2023-05-04 20:49:31,638 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] ERROR migratus.migration.sql - ERROR: value "109321309648652260554" is out of range for type bigint 
+2023-05-04 20:49:31,641 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Ending migrations 
+2023-05-04 20:50:54,475 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Starting migrations 
+2023-05-04 20:50:54,514 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x217f3ae8 /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:50:54,519 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Running down for [20230504220643 20230425125835 20230417032642 20230321184035 20230228002443] 
+2023-05-04 20:50:54,519 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Down 20230504220643-user-id-type 
+2023-05-04 20:50:54,520 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x63442241 org.postgresql.jdbc.PgConnection@63442241]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:50:54,527 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-05-04 20:50:54,576 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] ERROR migratus.migration.sql - failed to execute command:
+ ALTER TABLE catalog.book_loan ALTER COLUMN user_id SET DATA TYPE bigint USING user_id::bigint; 
+2023-05-04 20:50:54,577 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] ERROR migratus.migration.sql - ERROR: value "109321309648652260554" is out of range for type bigint 
+2023-05-04 20:50:54,579 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Ending migrations 
+2023-05-04 20:54:36,948 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Starting migrations 
+2023-05-04 20:54:36,993 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x5764ae5c /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:54:36,996 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Running down for [20230425125835 20230417032642 20230321184035 20230228002443] 
+2023-05-04 20:54:36,996 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Down 20230425125835-book-item-model 
+2023-05-04 20:54:36,996 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x31ff708f org.postgresql.jdbc.PgConnection@31ff708f]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:37,003 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 2 down migrations 
+2023-05-04 20:54:37,742 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230425125835 not complete 
+2023-05-04 20:54:37,769 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Down 20230417032642-adds-librarians 
+2023-05-04 20:54:37,770 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x31ff708f org.postgresql.jdbc.PgConnection@31ff708f]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:37,776 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 2 down migrations 
+2023-05-04 20:54:37,791 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230417032642 not complete 
+2023-05-04 20:54:37,802 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Down 20230321184035-removes-catalog-book-info 
+2023-05-04 20:54:37,804 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x31ff708f org.postgresql.jdbc.PgConnection@31ff708f]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:37,813 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 3 down migrations 
+2023-05-04 20:54:38,281 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230321184035 not complete 
+2023-05-04 20:54:38,291 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Down 20230228002443-initial-catalog-model 
+2023-05-04 20:54:38,292 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x31ff708f org.postgresql.jdbc.PgConnection@31ff708f]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:38,301 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 4 down migrations 
+2023-05-04 20:54:38,327 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230228002443 not complete 
+2023-05-04 20:54:38,347 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Ending migrations 
+2023-05-04 20:54:38,348 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Starting migrations 
+2023-05-04 20:54:38,403 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x34133bbc /home/janet1204/Documentos/CC/2023-2/IngeSoft/sugbi-otro/sugbi/resources/migrations] 
+2023-05-04 20:54:38,408 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230417032642 20230425125835 20230505025206] 
+2023-05-04 20:54:38,410 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-05-04 20:54:38,411 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7af05425 org.postgresql.jdbc.PgConnection@7af05425]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:38,419 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-05-04 20:54:38,781 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230228002443 complete 
+2023-05-04 20:54:38,813 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-05-04 20:54:38,815 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7af05425 org.postgresql.jdbc.PgConnection@7af05425]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:38,821 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-05-04 20:54:38,903 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230321184035 complete 
+2023-05-04 20:54:38,913 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Up 20230417032642-adds-librarians 
+2023-05-04 20:54:38,913 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7af05425 org.postgresql.jdbc.PgConnection@7af05425]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:38,918 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 2 up migrations 
+2023-05-04 20:54:39,123 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230417032642 complete 
+2023-05-04 20:54:39,134 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Up 20230425125835-book-item-model 
+2023-05-04 20:54:39,137 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7af05425 org.postgresql.jdbc.PgConnection@7af05425]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:39,141 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 2 up migrations 
+2023-05-04 20:54:39,268 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230425125835 complete 
+2023-05-04 20:54:39,278 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Up 20230505025206-user-id-type 
+2023-05-04 20:54:39,279 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7af05425 org.postgresql.jdbc.PgConnection@7af05425]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-05-04 20:54:39,286 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-05-04 20:54:39,524 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] DEBUG migratus.database - marking 20230505025206 complete 
+2023-05-04 20:54:39,534 [nREPL-session-7288b3b1-71e4-4dfa-b250-d58fd03753f0] INFO  migratus.core - Ending migrations 
+2023-05-04 21:07:43,285 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:07:43,286 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:07:43,781 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:07:43,782 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:07:44,127 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:07:44,128 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:10:23,645 [qtp1472820098-125] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:10:23,646 [qtp1472820098-125] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:23:23,353 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:23:23,354 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:27:43,287 [qtp1472820098-126] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:27:43,288 [qtp1472820098-126] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:34:08,266 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:34:08,300 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:34:08,537 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:34:08,537 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:34:08,817 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:34:08,818 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:37:09,725 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:37:09,726 [qtp1472820098-127] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:38:06,529 [qtp1472820098-128] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:38:06,529 [qtp1472820098-128] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:40:29,597 [qtp1472820098-125] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:40:29,598 [qtp1472820098-125] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:43:21,456 [qtp1472820098-124] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:43:21,456 [qtp1472820098-124] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:43:21,644 [qtp1472820098-124] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:43:21,644 [qtp1472820098-124] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:46:30,886 [qtp1472820098-128] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 21:46:30,887 [qtp1472820098-128] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 21:48:37,761 [qtp1472820098-126] ERROR sugbi.middleware - Key must be integer 
+java.lang.IllegalArgumentException: Key must be integer
+	at clojure.lang.APersistentVector.invoke(APersistentVector.java:297)
+	at ring.middleware.flash$flash_response.invokeStatic(flash.clj:24)
+	at ring.middleware.flash$flash_response.invoke(flash.clj:14)
+	at ring.middleware.flash$wrap_flash$fn__17916.invoke(flash.clj:39)
+	at ring.middleware.session$wrap_session$fn__18165.invoke(session.clj:108)
+	at ring.middleware.keyword_params$wrap_keyword_params$fn__18211.invoke(keyword_params.clj:53)
+	at ring.middleware.nested_params$wrap_nested_params$fn__18269.invoke(nested_params.clj:89)
+	at ring.middleware.multipart_params$wrap_multipart_params$fn__18401.invoke(multipart_params.clj:171)
+	at ring.middleware.params$wrap_params$fn__18428.invoke(params.clj:75)
+	at ring.middleware.cookies$wrap_cookies$fn__18116.invoke(cookies.clj:214)
+	at ring.middleware.resource$wrap_resource_prefer_resources$fn__18464.invoke(resource.clj:25)
+	at ring.middleware.content_type$wrap_content_type$fn__18564.invoke(content_type.clj:34)
+	at ring.middleware.default_charset$wrap_default_charset$fn__18588.invoke(default_charset.clj:31)
+	at ring.middleware.not_modified$wrap_not_modified$fn__18530.invoke(not_modified.clj:61)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at sugbi.middleware$wrap_internal_error$wrap_internal_error_fn__20450.invoke(middleware.clj:29)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:75)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 21:53:01,956 [qtp1472820098-128] ERROR sugbi.middleware - Key must be integer 
+java.lang.IllegalArgumentException: Key must be integer
+	at clojure.lang.APersistentVector.invoke(APersistentVector.java:297)
+	at ring.middleware.flash$flash_response.invokeStatic(flash.clj:24)
+	at ring.middleware.flash$flash_response.invoke(flash.clj:14)
+	at ring.middleware.flash$wrap_flash$fn__17916.invoke(flash.clj:39)
+	at ring.middleware.session$wrap_session$fn__18165.invoke(session.clj:108)
+	at ring.middleware.keyword_params$wrap_keyword_params$fn__18211.invoke(keyword_params.clj:53)
+	at ring.middleware.nested_params$wrap_nested_params$fn__18269.invoke(nested_params.clj:89)
+	at ring.middleware.multipart_params$wrap_multipart_params$fn__18401.invoke(multipart_params.clj:171)
+	at ring.middleware.params$wrap_params$fn__18428.invoke(params.clj:75)
+	at ring.middleware.cookies$wrap_cookies$fn__18116.invoke(cookies.clj:214)
+	at ring.middleware.resource$wrap_resource_prefer_resources$fn__18464.invoke(resource.clj:25)
+	at ring.middleware.content_type$wrap_content_type$fn__18564.invoke(content_type.clj:34)
+	at ring.middleware.default_charset$wrap_default_charset$fn__18588.invoke(default_charset.clj:31)
+	at ring.middleware.not_modified$wrap_not_modified$fn__18530.invoke(not_modified.clj:61)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at sugbi.middleware$wrap_internal_error$wrap_internal_error_fn__20450.invoke(middleware.clj:29)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:75)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 21:55:37,520 [qtp1472820098-128] ERROR sugbi.middleware - Key must be integer 
+java.lang.IllegalArgumentException: Key must be integer
+	at clojure.lang.APersistentVector.invoke(APersistentVector.java:297)
+	at ring.middleware.flash$flash_response.invokeStatic(flash.clj:24)
+	at ring.middleware.flash$flash_response.invoke(flash.clj:14)
+	at ring.middleware.flash$wrap_flash$fn__17916.invoke(flash.clj:39)
+	at ring.middleware.session$wrap_session$fn__18165.invoke(session.clj:108)
+	at ring.middleware.keyword_params$wrap_keyword_params$fn__18211.invoke(keyword_params.clj:53)
+	at ring.middleware.nested_params$wrap_nested_params$fn__18269.invoke(nested_params.clj:89)
+	at ring.middleware.multipart_params$wrap_multipart_params$fn__18401.invoke(multipart_params.clj:171)
+	at ring.middleware.params$wrap_params$fn__18428.invoke(params.clj:75)
+	at ring.middleware.cookies$wrap_cookies$fn__18116.invoke(cookies.clj:214)
+	at ring.middleware.resource$wrap_resource_prefer_resources$fn__18464.invoke(resource.clj:25)
+	at ring.middleware.content_type$wrap_content_type$fn__18564.invoke(content_type.clj:34)
+	at ring.middleware.default_charset$wrap_default_charset$fn__18588.invoke(default_charset.clj:31)
+	at ring.middleware.not_modified$wrap_not_modified$fn__18530.invoke(not_modified.clj:61)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at sugbi.middleware$wrap_internal_error$wrap_internal_error_fn__20450.invoke(middleware.clj:29)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:75)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 21:56:11,039 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 21:58:53,199 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-05-04 21:58:54,390 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-05-04 21:58:54,487 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-05-04 21:58:54,940 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-05-04 21:58:55,024 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-05-04 22:00:56,122 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 22:02:56,346 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-05-04 22:02:57,738 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-05-04 22:02:57,749 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-05-04 22:02:57,908 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-05-04 22:02:57,939 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-05-04 22:03:45,258 [nREPL-session-384385da-bcfb-4025-b05f-4412a54f9e58] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 22:03:46,301 [nREPL-session-384385da-bcfb-4025-b05f-4412a54f9e58] INFO  luminus.http-server - server started on port 3000 
+2023-05-04 22:04:27,082 [qtp1282244595-112] WARN  o.eclipse.jetty.server.HttpChannel - /api/api-docs/swagger-ui.css 
+java.lang.IllegalStateException: ABORTED
+	at org.eclipse.jetty.server.HttpChannelState.sendError(HttpChannelState.java:911)
+	at org.eclipse.jetty.server.Response.sendError(Response.java:492)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:82)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 22:05:17,644 [qtp1282244595-111] ERROR sugbi.middleware - Key must be integer 
+java.lang.IllegalArgumentException: Key must be integer
+	at clojure.lang.APersistentVector.invoke(APersistentVector.java:297)
+	at ring.middleware.flash$flash_response.invokeStatic(flash.clj:24)
+	at ring.middleware.flash$flash_response.invoke(flash.clj:14)
+	at ring.middleware.flash$wrap_flash$fn__17916.invoke(flash.clj:39)
+	at ring.middleware.session$wrap_session$fn__18165.invoke(session.clj:108)
+	at ring.middleware.keyword_params$wrap_keyword_params$fn__18211.invoke(keyword_params.clj:53)
+	at ring.middleware.nested_params$wrap_nested_params$fn__18269.invoke(nested_params.clj:89)
+	at ring.middleware.multipart_params$wrap_multipart_params$fn__18401.invoke(multipart_params.clj:171)
+	at ring.middleware.params$wrap_params$fn__18428.invoke(params.clj:75)
+	at ring.middleware.cookies$wrap_cookies$fn__18116.invoke(cookies.clj:214)
+	at ring.middleware.resource$wrap_resource_prefer_resources$fn__18464.invoke(resource.clj:25)
+	at ring.middleware.content_type$wrap_content_type$fn__18564.invoke(content_type.clj:34)
+	at ring.middleware.default_charset$wrap_default_charset$fn__18588.invoke(default_charset.clj:31)
+	at ring.middleware.not_modified$wrap_not_modified$fn__18530.invoke(not_modified.clj:61)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at sugbi.middleware$wrap_internal_error$wrap_internal_error_fn__20450.invoke(middleware.clj:29)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:75)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 22:16:04,670 [qtp1282244595-114] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 22:16:04,671 [qtp1282244595-114] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 22:16:37,509 [qtp1282244595-113] ERROR sugbi.middleware - Key must be integer 
+java.lang.IllegalArgumentException: Key must be integer
+	at clojure.lang.APersistentVector.invoke(APersistentVector.java:297)
+	at ring.middleware.flash$flash_response.invokeStatic(flash.clj:24)
+	at ring.middleware.flash$flash_response.invoke(flash.clj:14)
+	at ring.middleware.flash$wrap_flash$fn__17916.invoke(flash.clj:39)
+	at ring.middleware.session$wrap_session$fn__18165.invoke(session.clj:108)
+	at ring.middleware.keyword_params$wrap_keyword_params$fn__18211.invoke(keyword_params.clj:53)
+	at ring.middleware.nested_params$wrap_nested_params$fn__18269.invoke(nested_params.clj:89)
+	at ring.middleware.multipart_params$wrap_multipart_params$fn__18401.invoke(multipart_params.clj:171)
+	at ring.middleware.params$wrap_params$fn__18428.invoke(params.clj:75)
+	at ring.middleware.cookies$wrap_cookies$fn__18116.invoke(cookies.clj:214)
+	at ring.middleware.resource$wrap_resource_prefer_resources$fn__18464.invoke(resource.clj:25)
+	at ring.middleware.content_type$wrap_content_type$fn__18564.invoke(content_type.clj:34)
+	at ring.middleware.default_charset$wrap_default_charset$fn__18588.invoke(default_charset.clj:31)
+	at ring.middleware.not_modified$wrap_not_modified$fn__18530.invoke(not_modified.clj:61)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at sugbi.middleware$wrap_internal_error$wrap_internal_error_fn__20450.invoke(middleware.clj:29)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:75)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 22:19:03,477 [qtp1282244595-115] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 22:19:03,479 [qtp1282244595-115] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 22:19:16,948 [qtp1282244595-112] ERROR sugbi.middleware - Key must be integer 
+java.lang.IllegalArgumentException: Key must be integer
+	at clojure.lang.APersistentVector.invoke(APersistentVector.java:297)
+	at ring.middleware.flash$flash_response.invokeStatic(flash.clj:24)
+	at ring.middleware.flash$flash_response.invoke(flash.clj:14)
+	at ring.middleware.flash$wrap_flash$fn__17916.invoke(flash.clj:39)
+	at ring.middleware.session$wrap_session$fn__18165.invoke(session.clj:108)
+	at ring.middleware.keyword_params$wrap_keyword_params$fn__18211.invoke(keyword_params.clj:53)
+	at ring.middleware.nested_params$wrap_nested_params$fn__18269.invoke(nested_params.clj:89)
+	at ring.middleware.multipart_params$wrap_multipart_params$fn__18401.invoke(multipart_params.clj:171)
+	at ring.middleware.params$wrap_params$fn__18428.invoke(params.clj:75)
+	at ring.middleware.cookies$wrap_cookies$fn__18116.invoke(cookies.clj:214)
+	at ring.middleware.resource$wrap_resource_prefer_resources$fn__18464.invoke(resource.clj:25)
+	at ring.middleware.content_type$wrap_content_type$fn__18564.invoke(content_type.clj:34)
+	at ring.middleware.default_charset$wrap_default_charset$fn__18588.invoke(default_charset.clj:31)
+	at ring.middleware.not_modified$wrap_not_modified$fn__18530.invoke(not_modified.clj:61)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at sugbi.middleware$wrap_internal_error$wrap_internal_error_fn__20450.invoke(middleware.clj:29)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:75)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 22:25:21,931 [qtp1282244595-112] INFO  sugbi.env - 
+-=[sugbi has shut down successfully]=- 
+2023-05-04 22:25:21,932 [qtp1282244595-112] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-05-04 22:26:33,631 [qtp1282244595-109] ERROR sugbi.middleware - Key must be integer 
+java.lang.IllegalArgumentException: Key must be integer
+	at clojure.lang.APersistentVector.invoke(APersistentVector.java:297)
+	at ring.middleware.flash$flash_response.invokeStatic(flash.clj:24)
+	at ring.middleware.flash$flash_response.invoke(flash.clj:14)
+	at ring.middleware.flash$wrap_flash$fn__17916.invoke(flash.clj:39)
+	at ring.middleware.session$wrap_session$fn__18165.invoke(session.clj:108)
+	at ring.middleware.keyword_params$wrap_keyword_params$fn__18211.invoke(keyword_params.clj:53)
+	at ring.middleware.nested_params$wrap_nested_params$fn__18269.invoke(nested_params.clj:89)
+	at ring.middleware.multipart_params$wrap_multipart_params$fn__18401.invoke(multipart_params.clj:171)
+	at ring.middleware.params$wrap_params$fn__18428.invoke(params.clj:75)
+	at ring.middleware.cookies$wrap_cookies$fn__18116.invoke(cookies.clj:214)
+	at ring.middleware.resource$wrap_resource_prefer_resources$fn__18464.invoke(resource.clj:25)
+	at ring.middleware.content_type$wrap_content_type$fn__18564.invoke(content_type.clj:34)
+	at ring.middleware.default_charset$wrap_default_charset$fn__18588.invoke(default_charset.clj:31)
+	at ring.middleware.not_modified$wrap_not_modified$fn__18530.invoke(not_modified.clj:61)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at ring.middleware.x_headers$wrap_x_header$fn__17879.invoke(x_headers.clj:22)
+	at sugbi.middleware$wrap_internal_error$wrap_internal_error_fn__20450.invoke(middleware.clj:29)
+	at ring.adapter.jetty9$proxy_handler$fn__27385.invoke(jetty9.clj:75)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doHandle(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1378)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+	at ring.adapter.jetty9.proxy$org.eclipse.jetty.servlet.ServletHandler$ff19274a.doScope(Unknown Source)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:562)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:418)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:675)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:410)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:407)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-04 22:27:50,962 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-05-04 22:27:51,191 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 

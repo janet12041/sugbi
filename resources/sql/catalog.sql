@@ -49,8 +49,6 @@ delete from catalog.book_loan
 where user_id = :user-id and book_item_id = :book-item-id;
 
 -- :name user-book-loans :? :*
-select book_id, title, due_date
+select book_loan_id, user_id, book_item_id, loan_date, due_date
 from catalog.book_loan 
-join catalog.book_item using (book_item_id)
-join catalog.book using (book_id)
 where user_id = :user-id;
