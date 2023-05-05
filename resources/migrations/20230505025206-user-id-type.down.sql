@@ -1,1 +1,0 @@
-ALTER TABLE catalog.book_loan ALTER COLUMN user_id SET DATA TYPE bigint USING user_id::bigint;

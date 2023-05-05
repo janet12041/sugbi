@@ -84,8 +84,8 @@
   [request]
   (let [user-id (get-in request [:session :sub])]
     (if (some? user-id)
-      (catalog.core/get-book-loans
-       user-id)
+      (response/ok (catalog.core/get-book-loans
+                 user-id))
       (response/forbidden {:message "Necesitas tener una sesión activa."}))))
 
 (defn get-user-lendings

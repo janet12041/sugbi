@@ -14,6 +14,10 @@ select *
 from catalog.book_loan
 where book_item_id = :book-item-id;
 
+-- :name insert-librarian! :1
+insert into user_management.librarian (sub) values (:sub)
+returning *;
+
 -- :name search :? :*
 select isbn, true as "available"
 from catalog.book

@@ -34,6 +34,7 @@
   (return-book 4 5)
   (get-book-loans 1)
   (get-book "1234")
+  (db/insert-librarian! {:sub "109321309648652260554"})
   )
 
 
